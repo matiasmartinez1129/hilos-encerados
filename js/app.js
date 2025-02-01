@@ -1,13 +1,13 @@
 // Lista de productos
 const productos = [
-  { id: 1, nombre: "Hilo Rojo", precio: 500, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-rojo.PNG" },
-  { id: 2, nombre: "Hilo Azul", precio: 600, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-azul.JPG" },
-  { id: 3, nombre: "Hilo Amarillo", precio: 550, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-amarillo.JPG" },
-  { id: 4, nombre: "Hilo Verde", precio: 550, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-verde.JPG" },
-  { id: 5, nombre: "Hilo Blanco", precio: 520, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-blanco.JPG" },
-  { id: 6, nombre: "Hilo Negro", precio: 530, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-negro.JPG" },
-  { id: 7, nombre: "Hilo Celeste", precio: 540, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-celeste.JPG" },
-  { id: 8, nombre: "Hilo Beige", precio: 510, medida: "1mm", tamaño: "50m", img: "../img/hilo-encerado-beige.JPEG" }
+  { id: 1, nombre: "Hilo Rojo", precio: 500, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-rojo.PNG" },
+  { id: 2, nombre: "Hilo Azul", precio: 600, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-azul.JPG" },
+  { id: 3, nombre: "Hilo Amarillo", precio: 550, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-amarillo.JPG" },
+  { id: 4, nombre: "Hilo Verde", precio: 550, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-verde.JPG" },
+  { id: 5, nombre: "Hilo Blanco", precio: 520, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-blanco.JPG" },
+  { id: 6, nombre: "Hilo Negro", precio: 530, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-negro.JPG" },
+  { id: 7, nombre: "Hilo Celeste", precio: 540, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-celeste.JPG" },
+  { id: 8, nombre: "Hilo Beige", precio: 510, medida: "1mm", tamaño: "50m", img: "img/hilo-encerado-beige.JPEG" }
 ];
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
