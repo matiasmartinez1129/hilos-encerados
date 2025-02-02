@@ -94,11 +94,9 @@ cerrarCarritoBtn.addEventListener("click", () => {
 const actualizarCarrito = () => {
   listaCarrito.innerHTML = "";
   let total = 0;
-  let contador = 0;
 
   carrito.forEach(producto => {
     total += producto.precio * producto.cantidad;
-    contador += producto.cantidad; // Sumar las cantidades para el contador total
     const item = document.createElement("div");
     item.classList.add("carrito-item");
     item.innerHTML = `
@@ -113,9 +111,10 @@ const actualizarCarrito = () => {
   });
 
   totalCarrito.textContent = total ? `$${total}` : "$0";
-  contadorCarrito.textContent = contador;
+  contadorCarrito.textContent = carrito.length; // Solo contar productos distintos
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
+
 
 // Agregar productos al carrito
 document.addEventListener("click", (e) => {
@@ -127,16 +126,17 @@ document.addEventListener("click", (e) => {
     if (!productoEnCarrito) {
       // Si el producto no está en el carrito, lo agregamos y sumamos al contador
       carrito.push({ ...producto, cantidad: 1 });
-      contadorCarrito.textContent = parseInt(contadorCarrito.textContent) + 1; // Incrementar solo cuando el producto es nuevo
+      contadorCarrito.textContent = parseInt(contadorCarrito.textContent) + 1; 
     } else {
-      // Si el producto ya está en el carrito, solo aumentamos su cantidad
+      // Si el producto ya está en el carrito, solo aumentamos su cantidad sin sumar al contador
       productoEnCarrito.cantidad++;
     }
 
     actualizarCarrito();
-    mostrarMensajeCarrito(); // Mostrar el mensaje al agregar al carrito
+    mostrarMensajeCarrito();
   }
 });
+
 
 // Sumar, restar o eliminar productos en el carrito
 document.addEventListener("click", (e) => {
